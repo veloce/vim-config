@@ -7,3 +7,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = http://github.com/ervandew/supertab.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = http://github.com/msanders/snipmate.vim.git
