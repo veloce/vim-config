@@ -116,6 +116,9 @@ nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR> 
 let g:pdv_cfg_Author = "Vincent Velociter"
 
+" acl
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " ********
 " Visual *
 " ********
