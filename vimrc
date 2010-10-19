@@ -127,13 +127,12 @@ nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR> 
 let g:pdv_cfg_Author = "Vincent Velociter"
 
-" acl
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
 
 " ********
 " Visual *
 " ********
 set background=dark
 set t_Co=256
-"let g:moria_style="dark"
-colorscheme blackboard
+colorscheme desert
