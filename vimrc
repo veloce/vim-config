@@ -34,6 +34,17 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" automatically remove trailing whitespace before write
+function! StripTrailingWhitespace()
+  normal mZ
+  %s/\s\+$//e
+  if line("'Z") != line(".")
+    echo "Stripped whitespace\n"
+  endif
+  normal `Z
+endfunction
+command! StripTWS call StripTrailingWhitespace()
+
 
 " ******************
 " * User interface *
