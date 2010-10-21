@@ -121,6 +121,11 @@ nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 " Indent whole PHP file
 nmap <leader>i <Esc>mygg=G'y
 
+" PHP Folding
+let g:DisableAutoPHPFolding = 1
+map <F5> <Esc>:EnableFastPHPFolds<CR>
+map <F6> <Esc>:DisablePHPFolds<CR>
+
 " phpdoc
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-P> :call PhpDocSingle()<CR> 
