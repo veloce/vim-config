@@ -116,17 +116,6 @@ nmap <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " read files in the same directory as the current file
 nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
 
-" Indent PHP templates as HTML files
-nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
-" Indent whole PHP file
-nmap <leader>i <Esc>mygg=G'y
-
-" phpdoc
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
-let g:pdv_cfg_Author = "Vincent Velociter"
-
 " ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
 
