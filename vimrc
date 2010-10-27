@@ -8,8 +8,6 @@ set nocompatible
 filetype indent plugin on
 syntax on
 
-let mapleader=","
-
 set history=1000
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
@@ -71,9 +69,6 @@ set smartcase
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
 set confirm
-
-" easily switch to the alternate file
-nnoremap <leader>al <C-^>
 
 " *******************
 " * Text formatting *
