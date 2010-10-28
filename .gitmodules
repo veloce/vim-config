@@ -1,6 +1,3 @@
-[submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = http://github.com/bronson/vim-bufexplorer.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/edsono/vim-matchit.git
