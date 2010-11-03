@@ -96,7 +96,6 @@ nnoremap <silent> <C-F7> :silent !ctags-exuberant -h ".php" --PHP-kinds=+cf --re
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
 
-
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 map Y y$
 
@@ -113,6 +112,9 @@ nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
 
 " ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
+
+" Detect twig filetype
+au BufNewFile,BufRead *.twig setf htmljinja
 
 " ********
 " Visual *
