@@ -43,6 +43,8 @@ function! StripTrailingWhitespace()
 endfunction
 command! StripTWS call StripTrailingWhitespace()
 
+" lowercase to modulized 
+nnoremap <leader>_ bf_x~
 
 " ******************
 " * User interface *
