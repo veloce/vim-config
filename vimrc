@@ -46,6 +46,13 @@ command! StripTWS call StripTrailingWhitespace()
 " lowercase to modulized 
 nnoremap <leader>_ bf_x~
 
+" syntastic
+let g:syntastic_enable_signs=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
 " ******************
 " * User interface *
 " ******************
