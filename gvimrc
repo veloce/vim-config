@@ -2,9 +2,8 @@
 set guioptions-=T
 " remove menu bar
 set guioptions-=m
+" Don't show right scrollbar
+set guioptions-=r 
 
-set background=dark
 colorscheme blackboard
-set columns=100
-set lines=50
-set gfn=Monospace\ 9
+set gfn=Monospace\ 10
