@@ -4,9 +4,9 @@ nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 nmap <leader>i <Esc>mygg=G'y
 
 " phpdoc
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
+nnoremap <C-S-D> :call PhpDocSingle()<CR> 
+"inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+"vnoremap <C-P> :call PhpDocRange()<CR> 
 let g:pdv_cfg_Author = "Vincent Velociter"
 
 "Folding
@@ -15,3 +15,10 @@ nmap <buffer> <C-F5> <Esc>:EnablePHPFolds<Cr>
 nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
 let g:DisableAutoPHPFolding = 1
 
+"PHP Colors
+highlight link phpVarSelector Identifier
+highlight link phpIdentifier Identifier
+highlight link phpParent Normal
+highlight link phpFunctions Function
+highlight link phpSpecial Keyword
+highlight link phpMemberSelector Special
