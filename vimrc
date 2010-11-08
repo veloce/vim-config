@@ -52,6 +52,21 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" ********
+" Visual *
+" ********
+colorscheme desert
+
+" Show syntax highlighting groups for word under cursor
+" see vimcast.org/episodes/creating-colorschemes-for-vim/
+nmap <S-M-p> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 " ******************
 " * User interface *
@@ -124,10 +139,3 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --igno
 
 " Detect twig filetype
 au BufNewFile,BufRead *.twig setf htmljinja
-
-" ********
-" Visual *
-" ********
-set background=dark
-set t_Co=256
-colorscheme desert
