@@ -32,16 +32,20 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" automatically remove trailing whitespace before write
-function! StripTrailingWhitespace()
-  normal mZ
-  %s/\s\+$//e
-  if line("'Z") != line(".")
-    echo "Stripped whitespace\n"
-  endif
-  normal `Z
+" Strip trailing whitespaces
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
 endfunction
-command! StripTWS call StripTrailingWhitespace()
+command! StripTWS call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.php,*.c,*.py,*.js :call <SID>StripTrailingWhitespaces()
 
 " lowercase to modulized 
 nnoremap <leader>_ bf_x~
