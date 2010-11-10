@@ -16,9 +16,11 @@ nmap <buffer> <F6> <Esc>:DisablePHPFolds<Cr>
 let g:DisableAutoPHPFolding = 1
 
 "PHP Colors
-highlight link phpVarSelector Identifier
-highlight link phpIdentifier Identifier
-highlight link phpParent Normal
-highlight link phpFunctions Function
-highlight link phpSpecial Keyword
-highlight link phpMemberSelector Special
+hi link phpVarSelector Identifier
+hi link phpIdentifier Identifier
+hi link phpParent Normal
+hi link phpFunctions Function
+hi link phpSpecial Keyword
+hi link phpMemberSelector Keyword
+hi link phpBoolean Boolean
+hi link phpNumber Number
