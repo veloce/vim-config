@@ -1,1 +1,1 @@
-/home/vincespot/www-dev/vim-aldmeris/colors/aldmeris.vim
+../../www-dev/vim-aldmeris/colors/aldmeris.vim
