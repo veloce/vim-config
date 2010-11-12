@@ -63,6 +63,7 @@ set statusline+=%*
 " ********
 " Visual *
 " ********
+set t_Co=256
 colorscheme desert
 
 " Show syntax highlighting groups for word under cursor
