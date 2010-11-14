@@ -5,5 +5,5 @@ set guioptions-=m
 " Don't show right scrollbar
 set guioptions-=r 
 
-colorscheme blackboard
+colorscheme aldmeris
 set gfn=Monospace\ 10
