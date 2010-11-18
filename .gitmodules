@@ -37,3 +37,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/colorsupport"]
+	path = bundle/colorsupport
+	url = https://github.com/vim-scripts/colorsupport.vim.git
