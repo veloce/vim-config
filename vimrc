@@ -103,6 +103,9 @@ set smartcase
 " dialogue asking if you wish to save changed files.
 set confirm
 
+" Lusty
+map <leader>lp :LustyJugglePrevious<cr>
+
 " *******************
 " * Text formatting *
 " *******************
