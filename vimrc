@@ -119,5 +119,8 @@ nmap <leader>rw :r <C-R>=expand("%:p:h") . "/" <CR>
 " ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=cache --ignore-dir=logs"
 
+" CommandT
+let g:CommandTMaxFiles = 30000  " Increase cache size
+
 " Detect twig filetype
 au BufNewFile,BufRead *.twig setf htmljinja
