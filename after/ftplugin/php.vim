@@ -24,3 +24,8 @@ hi link phpSpecial Keyword
 hi link phpMemberSelector Keyword
 hi link phpBoolean Boolean
 hi link phpNumber Number
+
+" HTML colors
+hi link htmlTag Normal
+hi link htmlTagName Normal
+hi link htmlEndTag Normal
