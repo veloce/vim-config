@@ -1,40 +1,58 @@
+" Vincent Velociter - vimrc
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" ***********
-" * General *
-" ***********
 set nocompatible
 filetype indent plugin on
 syntax on
+
+set t_Co=256
+colorscheme desert
 
 set history=1000
 set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
 set wildignore=*/cache/**,*/logs/**
-
-set ignorecase " Case-insensitive searching.
-set smartcase " But case-sensitive if expression contains a capital letter.
-set incsearch " Highlight matches as you type.
-set hlsearch " Highlight matches.
-
+set ignorecase                        " Case-insensitive searching.
+set smartcase                         " But case-sensitive if expression contains a capital letter.
+set incsearch                         " Highlight matches as you type.
+set hlsearch                          " Highlight matches.
 set mouse=a                           " Enable use of the mouse for all modes
 
 set backup
 set backupdir=~/.vim/backup
-
 set directory=~/.vim/tmp              " directory to put swap files
 
-" disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
+set ruler
+set cursorline
+set laststatus=2                      " always display status line
+set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
+set showcmd                           " Show partial commands in the last line of the screen
+set showmode
+set cmdheight=2                       " command bar height
+set number
+
+set gdefault                          " Always replace all occurences of a line
+set nostartofline                     " Stop certain movements from always going to the first character of a line.
+set notimeout ttimeout ttimeoutlen=200 " Quickly time out on keycodes, but never time out on mappings
+
+
+set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
+
+" indent settings
+set autoindent
+set expandtab
+set smartindent
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" easy switch for indent spaces
+nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
+nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
 
 " Strip trailing whitespaces
 function! <SID>StripTrailingWhitespaces()
@@ -51,20 +69,14 @@ endfunction
 command! StripTWS call <SID>StripTrailingWhitespaces()
 autocmd BufWritePre *.php,*.c,*.py,*.js :call <SID>StripTrailingWhitespaces()
 
-" lowercase to modulized 
+" lowercase to camelCase 
 nnoremap <leader>_ bf_x~
 
-" syntastic
+" syntastic options
 let g:syntastic_enable_signs=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-" ********
-" Visual *
-" ********
-set t_Co=256
-colorscheme desert
 
 " Show syntax highlighting groups for word under cursor
 " see vimcast.org/episodes/creating-colorschemes-for-vim/
@@ -76,54 +88,12 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-
-" ******************
-" * User interface *
-" ******************
-set ruler
-set laststatus=2    " always display status line
-" statusline : see http://vim.wikia.com/wiki/Showing_syntax_highlight_group_in_statusline
-set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
-set showcmd         " Show partial commands in the last line of the screen
-set showmode
-set cmdheight=2     " command bar height
-set number
-
-" Stop certain movements from always going to the first character of a line.
-set nostartofline
-
-" Quickly time out on keycodes, but never time out on mappings
-set notimeout ttimeout ttimeoutlen=200
-
-" Use case insensitive search, except when using capital letters
-set ignorecase
-set smartcase
-
-" Instead of failing a command because of unsaved changes, instead raise a
-" dialogue asking if you wish to save changed files.
-set confirm
-
 " Lusty
 map <leader>lp :LustyJugglePrevious<cr>
 
-" *******************
-" * Text formatting *
-" *******************
-" Allow backspacing over autoindent, line breaks and start of insert action
-set backspace=indent,eol,start
-
-" indent settings
-set autoindent
-set expandtab
-set smartindent
-
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-
-" easy switch for indent spaces
-nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
-nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
+" Faster viewport scrolling
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " CTAGS 
 nnoremap <silent> <C-F7> :silent !ctags-exuberant -h ".php" --PHP-kinds=+cf --recurse --exclude=*/cache/* --exclude=*/logs/* --exclude=*/data/* --exclude="\.git" --exclude="\.svn" --languages=PHP<cr>
