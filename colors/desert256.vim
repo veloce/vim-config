@@ -4,7 +4,7 @@ set background=dark
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "desert"
+let g:colors_name = "desert256"
 hi Normal guifg=White guibg=grey20 ctermfg=231 ctermbg=236
 hi SpecialKey gui=none guifg=Cyan guibg=none cterm=none ctermfg=51 ctermbg=none
 hi NonText gui=bold guifg=Blue guibg=none cterm=bold ctermfg=21 ctermbg=none
