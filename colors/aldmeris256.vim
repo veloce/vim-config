@@ -13,6 +13,9 @@ hi link htmlH4 Normal
 hi link htmlH5 Normal
 hi link htmlH6 Normal
 hi link phpParent Normal
+hi link cssIdentifier Normal
+hi link cssClassName Normal
+hi link cssBraces Normal
 hi SpecialKey gui=none guifg=Cyan guibg=none cterm=none ctermfg=51 ctermbg=none
 hi NonText gui=bold guifg=Blue guibg=none cterm=bold ctermfg=21 ctermbg=none
 hi Directory gui=none guifg=Cyan guibg=none cterm=none ctermfg=51 ctermbg=none
@@ -60,6 +63,7 @@ hi CursorColumn guibg=#464646 ctermbg=238
 hi MatchParen guibg=#ad7fa8 guifg=#FFFFFF ctermfg=231 ctermbg=13
 hi Visual guibg=#888a85 guifg=#eeeeec ctermfg=15 ctermbg=102
 hi LineNr guibg=#000000 guifg=#555753 ctermfg=8 ctermbg=16
+hi Folded guibg=NONE guifg=#c3c7ca ctermfg=251 ctermbg=NONE
 hi NonText guifg=#555753 ctermfg=8
 hi SpecialKey guifg=#555753 ctermfg=8
 hi Pmenu guibg=#000000 guifg=#c0c0c0 ctermfg=250 ctermbg=16
@@ -89,14 +93,22 @@ hi link htmlTagName xmlTag
 hi link htmlSpecialTagName xmlTag
 hi link htmlString xmlString
 hi link htmlSpecialChar PreProc
-hi link jinjaTagDelim Statement
+hi link jinjaTagDelim Special
 hi link jinjaVarDelim jinjaTagDelim
-hi link jinjaFilter Special
+hi link jinjaFilter Function
 hi link jinjaString xmlString
 hi link phpVarSelector Identifier
 hi link phpIdentifier Identifier
 hi link phpFunctions Function
-hi link phpSpecial Keyword
+hi link phpSpecial Special
 hi link phpMemberSelector Keyword
 hi link phpBoolean Boolean
 hi link phpNumber Number
+hi link cssRenderProp Keyword
+hi link cssBoxProp cssRenderProp
+hi link cssColorProp cssRenderProp
+hi link cssFontProp cssRenderProp
+hi link cssTextProp cssRenderProp
+hi link cssGeneratedContentProp cssRenderProp
+hi link cssValueLength Boolean
+hi link cssPseudoClassId Identifier
