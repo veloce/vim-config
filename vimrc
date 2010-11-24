@@ -83,7 +83,7 @@ set statusline+=%*
 
 " Show syntax highlighting groups for word under cursor
 " see vimcast.org/episodes/creating-colorschemes-for-vim/
-nmap <S-M-p> :call <SID>SynStack()<CR>
+nnoremap <C-F8> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
