@@ -8,7 +8,7 @@ filetype indent plugin on
 syntax on
 
 set t_Co=256
-colorscheme desert256
+colorscheme aldmeris256
 
 set history=1000
 set hidden                            " Change buffer without saving
