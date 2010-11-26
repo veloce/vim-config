@@ -75,8 +75,16 @@ autocmd BufWritePre *.php,*.c,*.py,*.js :call <SID>StripTrailingWhitespaces()
 " lowercase to camelCase 
 nnoremap <leader>_ bf_x~
 
+" Change cursor color in terminal
+if &term =~ "xterm"
+    let &t_SI = "\<Esc>]12;orange\x7"
+    let &t_EI = "\<Esc>]12;white\x7"
+endif
+
 " syntastic options
 let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_quiet_warnings=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
