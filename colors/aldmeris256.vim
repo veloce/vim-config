@@ -12,6 +12,7 @@ hi link htmlH3 Normal
 hi link htmlH4 Normal
 hi link htmlH5 Normal
 hi link htmlH6 Normal
+hi link javaScriptBraces normal
 hi link phpParent Normal
 hi link cssIdentifier Normal
 hi link cssClassName Normal
