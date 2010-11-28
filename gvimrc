@@ -6,4 +6,4 @@ set guioptions-=m
 set guioptions-=r 
 
 colorscheme aldmeris
-set gfn=Monospace\ 12
+set gfn=Monospace\ 10
