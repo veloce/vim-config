@@ -51,7 +51,7 @@ set shiftwidth=4
 set softtabstop=4
 
 " launch help in vert mode
-nmap <leader>h :vert help
+nmap <leader>h :vert help 
 
 " easy switch for indent spaces
 nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
@@ -70,7 +70,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 command! StripTWS call <SID>StripTrailingWhitespaces()
-autocmd BufWritePre *.php,*.c,*.py,*.js :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.php,*.c,*.py,*.js,*.twig,*.html,*.xml,*.css :call <SID>StripTrailingWhitespaces()
 
 " lowercase to camelCase 
 nnoremap <leader>_ bf_x~
@@ -81,10 +81,13 @@ if &term =~ "xterm"
     let &t_EI = "\<Esc>]12;white\x7"
 endif
 
+" supertab
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabLeadingSpaceCompletion = 0
+
 " syntastic options
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_quiet_warnings=0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
