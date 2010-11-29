@@ -82,7 +82,7 @@ if &term =~ "xterm"
 endif
 
 " supertab
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabLeadingSpaceCompletion = 0
 
 " syntastic options
