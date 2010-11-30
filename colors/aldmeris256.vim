@@ -5,7 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 let g:colors_name = "aldmeris256"
-hi Normal guifg=#d3d7cf guibg=#2e3436 ctermfg=7 ctermbg=0
+hi Normal guibg=#2e3436 guifg=#d3d7cf ctermfg=7 ctermbg=0
 hi link htmlH1 Normal
 hi link htmlH2 Normal
 hi link htmlH3 Normal
@@ -59,32 +59,32 @@ hi Cursor gui=reverse guifg=none guibg=none cterm=reverse ctermfg=none ctermbg=n
 hi lCursor gui=reverse guifg=none guibg=none cterm=reverse ctermfg=none ctermbg=none
 hi MatchParen gui=none guifg=none guibg=DarkCyan cterm=none ctermfg=none ctermbg=30
 hi Cursor guibg=#d3d7cf guifg=#000000 ctermfg=16 ctermbg=7
-hi CursorLine guibg=#555753 ctermbg=8
-hi CursorColumn guibg=#464646 ctermbg=238
+hi CursorLine guibg=#555753 guifg=NONE ctermfg=NONE ctermbg=8
+hi CursorColumn guibg=#464646 guifg=NONE ctermfg=NONE ctermbg=238
 hi MatchParen guibg=#ad7fa8 guifg=#FFFFFF ctermfg=231 ctermbg=13
 hi Visual guibg=#888a85 guifg=#eeeeec ctermfg=15 ctermbg=102
 hi LineNr guibg=#000000 guifg=#555753 ctermfg=8 ctermbg=16
 hi Folded guibg=NONE guifg=#c3c7ca ctermfg=251 ctermbg=NONE
+hi clear Search
+hi Search guibg=#555753 ctermbg=8
 hi NonText guifg=#555753 ctermfg=8
 hi SpecialKey guifg=#555753 ctermfg=8
 hi Pmenu guibg=#000000 guifg=#c0c0c0 ctermfg=250 ctermbg=16
 hi PmenuSel guibg=#555753 guifg=#ffffff ctermfg=231 ctermbg=8
 hi PmenuSbar guibg=#444444 guifg=#444444 ctermfg=238 ctermbg=238
 hi PmenuThumb guibg=#888888 guifg=#888888 ctermfg=102 ctermbg=102
-hi Comment guifg=#888a85 gui=italic ctermfg=102
-hi Constant guifg=#fce94f ctermfg=11
-hi String guifg=#edd400 ctermfg=220
-hi Boolean guifg=#ce5c00 ctermfg=166
-hi Identifier guifg=#729fcf gui=NONE cterm=NONE ctermfg=12
-hi Function guifg=#f57900 ctermfg=208
-hi Statement guifg=#eeeeec gui=bold cterm=bold ctermfg=15
-hi PreProc guifg=#ad7fa8 ctermfg=13
-hi Type guifg=#8ae234 gui=bold cterm=bold ctermfg=10
-hi Special guifg=#fcaf3e ctermfg=215
-hi Error guifg=#eeeeec guibg=#cc0000 gui=bold cterm=bold ctermfg=15 ctermbg=1
-hi Todo guifg=#888a85 guibg=#fce94f gui=bold cterm=bold ctermfg=102 ctermbg=11
-hi clear Search
-hi Search guibg=#555753 ctermbg=8
+hi Comment guibg=NONE guifg=#888a85 gui=italic ctermfg=102 ctermbg=NONE
+hi Constant guibg=NONE guifg=#fce94f ctermfg=11 ctermbg=NONE
+hi String guibg=NONE guifg=#edd400 ctermfg=220 ctermbg=NONE
+hi Boolean guibg=NONE guifg=#ce5c00 ctermfg=166 ctermbg=NONE
+hi Identifier guibg=NONE guifg=#729fcf gui=NONE cterm=NONE ctermfg=12 ctermbg=NONE
+hi Function guibg=NONE guifg=#f57900 ctermfg=208 ctermbg=NONE
+hi Statement guibg=NONE guifg=#eeeeec gui=bold cterm=bold ctermfg=15 ctermbg=NONE
+hi PreProc guibg=NONE guifg=#ad7fa8 ctermfg=13 ctermbg=NONE
+hi Type guibg=NONE guifg=#8ae234 gui=bold cterm=bold ctermfg=10 ctermbg=NONE
+hi Special guibg=NONE guifg=#fcaf3e ctermfg=215 ctermbg=NONE
+hi Error guibg=#cc0000 guifg=#eeeeec gui=bold cterm=bold ctermfg=15 ctermbg=1
+hi Todo guibg=#fce94f guifg=#888a85 gui=bold cterm=bold ctermfg=102 ctermbg=11
 hi link xmlTag Identifier
 hi link xmlEndTag xmlTag
 hi link xmlTagName xmlTag
@@ -94,7 +94,7 @@ hi link htmlTagName xmlTag
 hi link htmlSpecialTagName xmlTag
 hi link htmlString xmlString
 hi link htmlSpecialChar PreProc
-hi link jinjaTagDelim Special
+hi link jinjaTagDelim Keyword
 hi link jinjaVarDelim jinjaTagDelim
 hi link jinjaFilter Function
 hi link jinjaString xmlString
