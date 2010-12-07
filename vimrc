@@ -107,6 +107,7 @@ endfunc
 
 " Lusty
 map <leader>lp :LustyJugglePrevious<cr>
+let g:LustyJugglerShowKeys = 0
 
 " Faster viewport scrolling
 nnoremap <C-e> 3<C-e>
