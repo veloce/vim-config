@@ -37,9 +37,6 @@ set number
 set gdefault                          " Always replace all occurences of a line
 set nostartofline                     " Stop certain movements from always going to the first character of a line.
 
-set notimeout ttimeout ttimeoutlen=200 " Quickly time out on keycodes, but never time out on mappings
-
-
 set backspace=indent,eol,start        " Allow backspacing over autoindent, line breaks and start of insert action
 
 " indent settings
