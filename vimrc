@@ -15,14 +15,14 @@ set hidden                            " Change buffer without saving
 set wildmenu                          " Better command-line completion 
 set wildmode=list:longest             
 set wildignore=*/cache/**,*/logs/**
+
 set ignorecase                        " Case-insensitive searching.
 set smartcase                         " But case-sensitive if expression contains a capital letter.
 set incsearch                         " Highlight matches as you type.
 set hlsearch                          " Highlight matches.
-set mouse=a                           " Enable use of the mouse for all modes
 
-set backup
-set backupdir=~/.vim/backup
+set nobackup                          " Don't make a backup before overwriting a file.
+set nowritebackup
 set directory=~/.vim/tmp              " directory to put swap files
 
 set ruler
@@ -36,6 +36,7 @@ set number
 
 set gdefault                          " Always replace all occurences of a line
 set nostartofline                     " Stop certain movements from always going to the first character of a line.
+
 set notimeout ttimeout ttimeoutlen=200 " Quickly time out on keycodes, but never time out on mappings
 
 
