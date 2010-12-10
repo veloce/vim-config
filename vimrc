@@ -27,6 +27,7 @@ set directory=~/.vim/tmp              " directory to put swap files
 
 set ruler
 set cursorline
+set scrolloff=5                       " context around cursor
 set laststatus=2                      " always display status line
 set statusline=[%n]\ %f\ %h%m%r%w\ (%{(&fenc==\"\"?&enc:&enc)})(%{&ff}){%Y}[%L]\ %=%-16(\ %l,%c-%v\ %)%P
 set showcmd                           " Show partial commands in the last line of the screen
