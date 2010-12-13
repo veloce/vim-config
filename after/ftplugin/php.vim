@@ -1,6 +1,9 @@
 " Indent PHP templates as HTML files
 nmap <leader>= :set ft=html<cr>mhgg=G'h:set ft=php<cr>
 
+" fast arrow
+imap jj ->
+
 " phpdoc
 nnoremap <C-S-D> :call PhpDocSingle()<CR> 
 "inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
