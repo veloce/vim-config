@@ -141,3 +141,5 @@ let g:CommandTMaxFiles = 30000  " Increase cache size
 
 " Detect twig filetype
 au BufNewFile,BufRead *.twig setf htmljinja
+
+runtime! ftplugin/man.vim
